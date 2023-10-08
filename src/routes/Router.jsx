@@ -5,13 +5,16 @@ import FAQs from "../components/pages/FAQs";
 import Details from "../components/pages/Details";
 import Login from "../components/pages/Login";
 import Register from "../components/pages/Register";
-import PrivateRouts from "./Privaterouts";
+import PrivateRouts from "./PrivateRouts";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
+import AboutUs from "../components/pages/AboutUs";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root> ,
+        errorElement : <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -27,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: '/faqs',
                 element:  <PrivateRouts> <FAQs></FAQs></PrivateRouts>
+            },
+            {
+                path: '/about',
+                element:  <PrivateRouts> <AboutUs></AboutUs></PrivateRouts>
             },
             {
                 path: '/login',

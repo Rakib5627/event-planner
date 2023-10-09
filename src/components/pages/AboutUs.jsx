@@ -1,6 +1,12 @@
 
 
 const AboutUs = () => {
+
+
+   
+
+
+
     return (
         <div className=" text-my-blue">
             <h1 className=" text-center text-3xl">WHO WE ARE</h1>

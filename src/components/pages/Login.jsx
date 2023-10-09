@@ -2,13 +2,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from 'sweetalert2';
 
 
 
 
 const Login = () => {
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn , signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     console.log('abcd', location)
@@ -20,15 +21,50 @@ const Login = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(email, password);
+
+
+        
+
+
+
         signIn(email, password)
             .then(result => {
                 console.log(result.user);
-
+                Swal.fire({
+                    icon: 'success',
+                    text: 'Login Successful',
+                    timer: 1000
+                    
+                  });
                 navigate(location?.state ? location.state : '/');
 
             })
             .catch(error => {
-                console.error(error);
+
+                const errorCode = error.code;
+                
+
+
+                if (errorCode === "auth/user-not-found" || errorCode === "auth/wrong-password") {
+                  alert("Incorrect email or password");
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        text: 'Incorrect email or password',
+                        
+                      });
+                }
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.error(error)
             })
     }
 
@@ -54,7 +90,9 @@ const Login = () => {
                         <button className="btn bg-my-pink hover:bg-my-red">Login</button>
                     </div>
                 </form>
-                <p className="text-center mt-4">Do not have an account <Link className="text-blue-600 font-bold" to="/register">Register</Link></p>
+                <p className="text-center my-4">Do not have an account <Link className="text-blue-600 font-bold" to="/register">Register</Link></p>
+                <div className="border border-x-1 opacity-20"></div>
+                <p className="mt-4 text-center"><button onClick={handleGoogleSignIn} className="btn btn-ghost">Sign in with Google</button></p>
             </div>
       
     );

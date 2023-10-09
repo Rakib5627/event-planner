@@ -12,7 +12,7 @@ const PrivateRouts = ({children}) => {
     console.log(location.pathname);
 
     if (loading) {
-        return <span className="loading loading-infinity loading-lg"></span>
+        return <span className="loading loading-spinner loading-lg"></span>
     }
 
     if (user) {

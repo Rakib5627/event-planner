@@ -5,7 +5,8 @@ import { useContext } from "react";
 
 const Navbar = () => {
 
-    const { user , logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user)
 
     const handleSignOut = () => {
         logOut()
@@ -46,9 +47,27 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
-                 {
-                    user? <><p onClick={handleSignOut}>Logout</p></> : <><p className=""><NavLink to="/login">Login</NavLink></p></>
-                 }
+                {
+                    user ? <>
+                        <div>
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={user.photoURL} />
+                                    </div>
+                                </label>
+                                <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                    <li>{user.displayName}</li>
+                                    <li>{user.email}</li>
+                                    <li onClick={handleSignOut}>Logout</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </>
+                        :
+                        <><p className="p-2 text-blue-600 font-semibold hover:font-bold"><NavLink to="/login">Login</NavLink></p>
+                            <Link className="p-2 text-blue-600 font-semibold hover:font-bold" to="/register">Register</Link></>
+                }
             </div>
 
         </div>
@@ -56,6 +75,11 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+                            
 
 
 

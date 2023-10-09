@@ -43,7 +43,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-center">
-                <Link className="normal-case text-3xl font-bold">Event Planner</Link>
+                <Link className="normal-case text-lg md:text-3xl font-bold">Event Planner</Link>
             </div>
 
             <div className="navbar-end">
@@ -52,7 +52,7 @@ const Navbar = () => {
                         <div>
                             <div className="dropdown dropdown-end">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full">
+                                    <div className=" w-6 md:w-10 rounded-full">
                                         <img src={user.photoURL} />
                                     </div>
                                 </label>
@@ -65,8 +65,8 @@ const Navbar = () => {
                         </div>
                     </>
                         :
-                        <><p className="p-2 text-blue-600 font-semibold hover:font-bold"><NavLink to="/login">Login</NavLink></p>
-                            <Link className="p-2 text-blue-600 font-semibold hover:font-bold" to="/register">Register</Link></>
+                        <><p className="p-2 text-xs md:text-base text-blue-600 font-semibold hover:font-bold"><NavLink to="/login">Login</NavLink></p>
+                            <Link className="hidden md:block p-2 text-blue-600 font-semibold hover:font-bold" to="/register">Register</Link></>
                 }
             </div>
 

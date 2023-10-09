@@ -6,7 +6,7 @@ const HomeCards = ({ homeCard }) => {
     const { id, name, price, image ,description } = homeCard;
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl ">
+            <div className="card bg-base-100 shadow-xl mb-2">
                 <figure><img src={image} alt="Shoes" className=" h-64 w-full" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>

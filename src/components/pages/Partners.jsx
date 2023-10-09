@@ -18,9 +18,9 @@ const Partners = () => {
     return (
         <div className="mt-20">
             <div>
-                <h1 className="text-3xl font-bold text-center my-6">Our Premium Event Items</h1>
+                <h1 className="text-3xl font-bold text-center my-5">Our Premium Event Items</h1>
 
-                <div className=" grid grid-cols-6 justify-center mb-20">
+                <div className=" grid grid-cols-2  md:grid-cols-3 lg:grid-cols-6 justify-between mb-20">
 
                     <div data-aos="flip-left"
                         data-aos-easing="ease-out-cubic"
@@ -70,13 +70,17 @@ const Partners = () => {
 
                 <h2 className="text-center text-3xl font-bold my-6">Why Choose Us?</h2>
 
-                <div className="grid grid-cols-2 justify-around lg:gap-10">
-                    <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 justify-around lg:gap-10">
+                    <div className="mb-2">
                         <p className="text-lg font-medium">ALL KIND OF LOGISTICS AND RESOURCES SUPPORT</p>
+                        <div className="border border-x-1 opacity-20"></div>
                         <p>As an experienced Event Management company, we have all kind of Event equipment, logistics and resources available</p>
+                        
                     </div>
-                    <div className="">
+                    
+                    <div className=" mb-2">
                         <p className="text-lg grid font-medium">EXPERIENCED EVENT PLANNER AND MANAGER</p>
+                        <div className="border border-x-1 opacity-20"></div>
                         <p>When it is about making your Event successful, it is all about making a good plan, managing and executing successfully. And, we have experienced who will make your event unique and memorable!</p>
                     </div>
                 </div>

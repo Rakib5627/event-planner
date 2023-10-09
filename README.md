@@ -1,8 +1,13 @@
-# React + Vite
+# Event Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+live link : https://event-planner-33ad1.firebaseapp.com/
 
-Currently, two official plugins are available:
+# Website Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- The website is about an even management website.
+- Here organizes any type of social events like marriage , engagement , birthday parties etc.
+- Here you can register/login and know the details of our services.
+- You can also see our premium event items here.
+- You can also know some basic questions about event management in FAQs section.
+- The website is dynamic and you will get a good user experience.
+- The website completely responsive.

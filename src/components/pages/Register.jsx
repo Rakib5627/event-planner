@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
@@ -10,6 +10,8 @@ const Register = () => {
     const { createUser, signInWithGoogle } = useContext(AuthContext);
 
     const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location.pathname);
 
     const handleRegister = e => {
         e.preventDefault();

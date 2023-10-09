@@ -15,13 +15,12 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer: B: `ReferenceError: greetign is nottt defined`
-</b></summary>
-<p>
+<details><summary>
+<b>Answer - B: `ReferenceError: greetign is not defined`</b></summary><p>
 
-#### Answer: B: `ReferenceError: greetign is nott defined`
+#### Answer: ?
 
-<i>Write your explanation here</i>
+<i>ReferenceError means that the code uses a name (called an identifier) that is not defined. And the error itself explicitly tells you what it is: greeting is not defined. Besides incorrect definition order, there are more common typos in JavaScript, both when using a variable and when declaring it.</i>
 
 </p>
 </details>
@@ -41,12 +40,14 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer - C: `"12"`</b>
+
+</summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Here  1 is a number and "2" is a string . When it sum between a number and a string , the number will also count as a string. So it will be add like two strings.</i>
 
 </p>
 </details>
@@ -67,12 +68,14 @@ console.log(food);
 - C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer - A: `['🍕', '🍫', '🥑', '🍔']`</b>
+
+</summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>You cannot replace in this method. You have to use unshift or push to add a string in the array.</i>
 
 </p>
 </details>
@@ -92,12 +95,14 @@ console.log(sayHi());
 - C: `Hi there, null`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer - - B: `Hi there, undefined`</b>
+
+</summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Here name is the parameter of the function . But its value was not assigned from anywhere. So there will be no value of name. This is why output will be undefined</i>
 
 </p>
 </details>
@@ -120,12 +125,14 @@ console.log(count);
 - C: 3
 - D: 4
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer - C : 3</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>let count = 0;: Initializes the count variable to 0.
+const nums = [0, 1, 2, 3];: Creates an array called nums with values [0, 1, 2, 3].
+nums.forEach((num) => {...});: Iterates over each element in the nums array using forEach</i>
 
 </p>
 </details>

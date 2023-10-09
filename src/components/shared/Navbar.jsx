@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useContext } from "react";
+import userimg from "../../assets/istockphoto-1337144146-612x612.jpg"
 
 
 const Navbar = () => {
@@ -53,7 +54,11 @@ const Navbar = () => {
                             <div className="dropdown dropdown-end">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                     <div className=" w-6 md:w-10 rounded-full">
-                                        <img src={user.photoURL} />
+                                        {user.photoURL? (
+                                            <img src={user.photoURL} alt="Image 1" />
+                                        ) : (
+                                            <img src={userimg} alt="" />
+                                        )}
                                     </div>
                                 </label>
                                 <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -79,7 +84,7 @@ export default Navbar;
 
 
 
-                            
+
 
 
 

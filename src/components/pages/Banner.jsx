@@ -22,7 +22,7 @@ const Banner = () => {
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
                     <img src={carouselOne} className="w-full opacity-80" />
-                    <div className="absolute hidden md:flex justify-between text-xs transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <div className="absolute md:flex justify-between text-xs transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" className="btn btn-circle bg-my-pink hover:bg-my-blue hover:text-my-of-white">Prev</a>
                         <a href="#slide1" className="btn btn-circle bg-my-pink hover:bg-my-blue hover:text-my-of-white">Next</a>
                     </div>
